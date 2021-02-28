@@ -1,0 +1,93 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<main>
+    <nav class="main_nav">
+        <span><a href="#" class="main_nav_boreder main_nav_color">Деревообрабатывающее<br>обоудование</a></span>
+        <span><a href="#" class="main_nav_boreder main_nav_color">Электротермическое<br>оборудование</a></span>
+        <span><a href="#" class="main_nav_boreder main_nav_color">Нестандатное<br>обоудование</a></span>
+        <span><a href="#" class="main_nav_color">Блочно-модульные<br>здания</a></span>
+    </nav>
+    <section class="section_1">
+        <div class="content">
+            <div><img src="~/images/desnamash-1.jpg"></div>
+            <div class="content_text">
+                <p>ООО "Деснамаш"</p>
+                <h1 class="section_h_t"><span class="section_s_t">Производим промышленное</span> и нестандартное оборудование</h1>
+
+                <p>Мы являемся одной из ведущих компаний в производстве конвейерных электропечей сопротивления с инфракрасным нагревом. Работаем с компаниями в различных секторах промышленности. Предлагаем экономически эффективные промышленные решения.</p>
+                <p>Нами закончены десятки проектов в разных отраслях промышленности. Мы активно расширяем ассортимент и географию поставок, участвуем в торгах и выигрываем конкурсы на электронных торговых площадках. Гарантируем нашим клиентам высокий уровень удовлетворенности.</p>
+                <p id="section_call_us">Позвоните нам, получите оценку квалифицированного специалиста</p>
+                <div class="content_call">
+                    <div class="content_call_img"><img src="~/images/header_phone.png" height="60px"></div>
+                    <div class="content_call_text">
+                        <p>Консультация бесплатна<br><span>+7 (4382) 770 390</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section_2">
+        <div class="section_2_text">
+            <div class="gap">
+                <div class="section_2_space"></div>
+                <div class="section_2_text_content">
+                    <p>Мы предлагаем</p>
+                    <h1 class="section_h_t section_2_t_color"><span class="section_s_t">Качественные услуги</span> промышленного сервиса</h1>
+                    <p>Предоставляем услуги проектирования и изготовления промышленного оборудования, средств механизации и автоматизации производственных процессов в разных секторах промышленности с учетом требований пятого технологического уклада.</p>
+                    <div class="section_2_icon">
+                        <img src="~/images/icon_1.png">
+                        <div>
+                            <h2 class="section_2_icon_h2">Широкий спектр услуг</h2>
+                            <p>Полный цикл сопровождения от разработки и изготовления до монтажа .</p>
+                        </div>
+                    </div>
+                    <div class="section_2_icon">
+                        <img src="~/images/icon_2.png">
+                        <div>
+                            <h2 class="section_2_icon_h2">Разработка и монтаж</h2>
+                            <p>Выполняем работу от проекта до конечного объекта.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section_2_img">
+            <div class="section_2_img_content">
+                <img src="~/images/box-we-are-bg.jpg">
+                <div class="section_2_img_text">
+                    <h1>Профессиональный персонал</h1>
+                    <p>Профессиональный опыт специалистов нашей компании, позволяет решать сложные, нестандартные задачи в сфере разработки и изготовления промышленного оборудования, производстве строительных металлических конструкций.</p>
+                </div>
+            </div>
+            <div class="section_2_space_img"></div>
+        </div>
+
+    </section>
+    <section class="section_3">
+        <div class="news">
+            <h1 class="item_border">Новости компании</h1>
+            <p>Будьте в курсе наших последних новостей и событий</p>
+            <button onclick="">Все новости</button>
+        </div>
+        <div class="production_banner">
+            @{
+                Random rnd = new Random();
+                int value = rnd.Next();
+                string src_img;
+                if (value % 2 == 0)
+                    src_img = "/images/img_1.jpg";
+                
+                else
+                    src_img = "/images/img_2.jpg";
+            }
+            <div><img src=@src_img></div>
+            <div class="section_3_text">
+                <h1><a href="#">Лесосушильные камеры с аэродинамическим нагревом</a></h1>
+                <p>По заявке предприятия специализирующегося на изготовлении деревянной тары нами были изготовлены две лесосушильные камеры с аэродинамическим нагревом.</p>
+                <a class="section_3_color" href="#">Подробнее -></a>
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Производство промышленного оборудования — ООО «Деснамаш»</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <header>
+        <div class="header_line">
+            <p class="header_space"></p>
+            <p class="header_call">
+                <button onclick="openForm()" href="" ><img src="~/images/header_phone.png">Заказать звонок!</button>
+            </p>
+        </div>
+        <div class="form-popup" id="myForm">
+            <form action="~/Home/SubmitContact" method="post" class="form">
+                <div class="formClose">
+                    <h3>Заказать обратный звонок консультанта</h3>
+                    <img onclick="closeForm()" src="~/images/x_icon.png" />
+                </div>
+                <div>
+                    <p>Имя</p>
+                    <input type="text" name="User" />
+                </div>
+                <div>
+                    <p>Телефон</p>
+                    <input type="text" name="ContactPhone" />
+                </div>
+                <input class="formSubmit" type="submit" value="Отправить" />
+            </form>
+        </div>
+        <section class="info">
+            <div class="info_left"></div>
+            <a class="logo_desnamash" href="#"><img src="~/images/logo_desnamash.png"></a>
+            <div class="info_item item_border">
+                <img src="~/images/mobile-phone.png" height="50px">
+                <div class="info_item_text">
+                    <h3>Телефон</h3><p>+7 (4832) 770-390</p>
+                </div>
+            </div>
+            <div class="info_item item_border">
+                <img src="~/images/email.png" height="50px">
+                <dir class="info_item_text">
+                    <h3>Email</h3><p>info@dm32.ru</p>
+                </dir>
+            </div>
+            <div class="info_item info_item_adress">
+                <img src="~/images/point.png" height="50px">
+                <dir class="info_item_text ">
+                    <h3>Адрес</h3><p>241022, Россия, г. Брянск, б-р Щорса, 2</p>
+                </dir>
+            </div>
+            <div class="info_right"></div>
+        </section>
+        <nav class="header_nav">
+            <div class="nav_block">
+                <a href="#" class="item_border">О компании</a>
+                <a href="#" class="item_border">Сертификаты</a>
+                <a href="#" class="item_border">Отзывы</a>
+                <a href="#" class="item_border">Новости</a>
+                <a href="#" class="item_border">Фото продукции</a>
+                <a href="#">Контакты</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer>
+        <section class="footer_info">
+            <div class="item_border">
+                <img class="footer_icon" src="~/images/header_phone.png">
+                <h1>Есть вопросы? Звоните сейчас</h1>
+                <p>+7 (4832) 770-390</p>
+                <a href="#">Контакты</a>
+            </div>
+            <div class="item_border">
+                <img class="footer_icon" src="~/images/email.png">
+                <h1>Требуется поддержка?</h1>
+                <p>info@dm32.ru</p>
+                <a href="#">Заполнить форму</a>
+            </div>
+            <div>
+                <img class="footer_icon" src="~/images/clock.png">
+                <h1>Режим работы</h1>
+                <p>ПН-ПТ с 8.00-18.00 Мск</p>
+                <a href="#">Подробнее</a>
+            </div>
+        </section>
+        <section class="subscribe">
+            <div class="subscribe_left_part">
+                <div class="subscribe_logo_desnamash">
+                    <img src="~/images/logo_desnamash.png">
+                    <p>Производство электротермического, деревообрабатывающего и специального оборудования</p>
+                </div>
+            </div>
+            <div class="subscribe_right_part">
+                <h1>Рассылка</h1>
+                <p>Будте в курсе событий, оформите подписку</p>
+            </div>
+        </section>
+        <section class="footer_last_line">
+            <div>2017 — 2021 <a href="#">ООО «Деснамаш»</a></div>
+            <div><a href="#">Политика конфиденциальности</a></div>
+        </section>
+    </footer>
+    <script src="~/js/MyForm.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
